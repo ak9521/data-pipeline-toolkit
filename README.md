@@ -95,6 +95,20 @@ data-pipeline-toolkit/
 ```
 
 ---
+------------------------------------------------------------------------------------------
+Output:
+D:\Arun_Karthik_GitHub_Portfolio\data-pipeline-toolkit>python -c "import pandas as pd; from validators.data_validator import DataValidator; df = pd.DataFrame({'id':[1,2,3],'amount':[100,200,None]}); DataValidator(df,'test').check_nulls(['amount']).report()"
+
+============================================================
+  Data Quality Report: test
+  Quality Score: 0.0/100  |  0 passed, 0 warned, 1 failed
+────────────────────────────────────────────────────────────
+  ✗ [null_check] amount: 1 nulls (33.33%) — threshold: 0.00%
+============================================================
+
+  1 critical validation failures detected!
+------------------------------------------------------------------------------------------
+
 
 ## 👤 Author
 
